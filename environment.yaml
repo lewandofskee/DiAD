@@ -35,3 +35,4 @@ dependencies:
       - transformers==4.19.2
       - xformers==0.0.18
       - opencv-python==4.5.1.48
+      - taming-transformers
