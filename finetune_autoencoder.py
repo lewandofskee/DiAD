@@ -111,7 +111,7 @@ logger_freq = 3000000000000
 learning_rate = 4.5e-5
 sd_locked = False
 only_mid_control = True
-
+data_path = './data/mvtecad/'
 
 # First use cpu to load models. Pytorch Lightning will automatically move it to GPUs.
 model = create_model('./models/autoencoder_kl_32x32x4.yaml').cpu()
@@ -120,8 +120,8 @@ model.learning_rate = batch_size * learning_rate
 
 
 # Misc
-train_dataset = VisaDataset('train')
-# train_dataset = MVTecDataset('train')
+# train_dataset = VisaDataset('train', data_path)
+train_dataset = MVTecDataset('train', data_path)
 train_dataloader = DataLoader(train_dataset, num_workers=8, batch_size=batch_size, shuffle=True)
 logger = ImageLogger(batch_frequency=logger_freq)
 trainer = pl.Trainer(gpus=1, precision=32, callbacks=[logger],  accumulate_grad_batches=8)
