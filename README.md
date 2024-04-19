@@ -23,7 +23,7 @@
 Our DiAD will also be supported in [ADer](https://github.com/zhangzjn/ADer)
 
 ## News
-- We update Multi-class AD [results](#DiAD-Results) in MVTec-AD/VisA/Real-IAD/Uni-Medical/COCO-AD/MVTec-3D datasets for seven metrics.
+- We update [Multi-class DiAD results](#DiAD-Results) in MVTec-AD/VisA/Real-IAD/Uni-Medical/COCO-AD/MVTec-3D datasets for seven metrics.
 
 
 ## Abstract
