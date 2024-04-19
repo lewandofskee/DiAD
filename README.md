@@ -126,16 +126,28 @@ The images are saved under `./log_image/, where
 - `xxx-samples.jpg` is the reconstructed image through the autoencoder and diffusion model.
 - `xxx-heatmap.png` is the heatmap of the anomaly score.
 
+### DiAD Results
+|   Method    | mAU-ROC<sub>I</sub> | mAP<sub>I</sub> | m*F*1-max<sub>I</sub> | mAU-ROC<sub>P</sub> | mAP<sub>P</sub> | m*F*1-max<sub>P</sub> | mAU-PRO<sub>R</sub> |
+|:-----------:|:-------------------:|:---------------:|:---------------------:|:-------------------:|:---------------:|:---------------------:|:-------------------:|
+|  MVTec-AD   |        97.2         |      99.0       |         96.5          |        96.8 | 52.6 | 55.5          |        90.7         |
+|    VisA     |        86.8 | 88.3 | 85.1          |       96.0 | 26.1 | 33.0          |        75.2         |
+|  Real-IAD   |        75.6 | 66.4 | 69.9          |        88.0 | 2.9 | 7.1          |        58.1         |
+| Uni-Medical |        85.1 | 84.5 | 81.2          |        95.9 | 38.0 | 35.6          |        85.4         |
+|   COCO-AD   |        59.0 | 53.0 | 63.2          |        68.1 | 20.5 | 14.2          |        30.8         |
+|  MVTec-3D   |        84.6 | 94.8 | 95.6          |        96.4 | 25.3 | 32.3          |        87.8         |
+
+
 ## Citation
 If you find this code useful, don't forget to star the repo and cite the paper:
 ```
-@misc{he2023diad,
-      title={DiAD: A Diffusion-based Framework for Multi-class Anomaly Detection},
-      author={Haoyang He and Jiangning Zhang and Hongxu Chen and Xuhai Chen and Zhishan Li and Xu Chen and Yabiao Wang and Chengjie Wang and Lei Xie},
-      year={2023},
-      eprint={2312.06607},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@inproceedings{he2024diffusion,
+  title={A Diffusion-Based Framework for Multi-Class Anomaly Detection},
+  author={He, Haoyang and Zhang, Jiangning and Chen, Hongxu and Chen, Xuhai and Li, Zhishan and Chen, Xu and Wang, Yabiao and Wang, Chengjie and Xie, Lei},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={8},
+  pages={8472--8480},
+  year={2024}
 }
 ```
 ## Acknowledgements
