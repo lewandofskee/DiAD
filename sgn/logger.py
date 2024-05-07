@@ -90,7 +90,7 @@ class ImageLogger(Callback):
     def check_frequency(self, check_idx):
         return check_idx % self.batch_freq == 0
 
-    def on_train_batch_end(self, trainer, pl_module, outputs, batch, batch_idx, dataloader_idx):
+    def on_train_batch_end(self, trainer, pl_module, outputs, batch, batch_idx): #, dataloader_idx):
         if trainer.current_epoch % trainer.check_val_every_n_epoch ==0:
             if not self.disabled:
                 self.log_img(pl_module, batch, batch_idx, split="train")
