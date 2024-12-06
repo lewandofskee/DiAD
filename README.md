@@ -35,6 +35,7 @@ First create a new conda environment
     conda env create -f environment.yaml
     conda activate diad
     pip3 install timm==0.8.15dev0 mmselfsup pandas transformers openpyxl imgaug numba numpy tensorboard fvcore accimage Ninja
+    (Optional) pip3 install xformers==0.0.18 (Need torch==2.0.0)
 ## 2.Dataset
 ### 2.1 MVTec-AD
 - **Create the MVTec-AD dataset directory**. Download the MVTec-AD dataset from [MVTec-AD](https://www.mvtec.com/company/research/datasets/mvtec-ad). Unzip the file and move them to `./training/MVTec-AD/`. The MVTec-AD dataset directory should be as follows. 
@@ -105,7 +106,7 @@ Then move it to the folder with changed name `./models/mvtec_ae.ckpt`. The same 
 
 ## 4. Build the model
 - We use the pre-trianed stable diffusion v1.5, the finetuned autoencoders and the Semantic-Guided Network to build the full needed model for training.
-The stable diffusion v1.5 could be downloaded from ["v1-5-pruned.ckpt"](https://huggingface.co/runwayml/stable-diffusion-v1-5/tree/main). Move it under the folder `./models/v1-5-pruned.ckpt`. 
+The stable diffusion v1.5 could be downloaded from ["v1-5-pruned.ckpt"]([https://huggingface.co/runwayml/stable-diffusion-v1-5/tree/main](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/blob/main/v1-5-pruned.ckpt)). Move it under the folder `./models/v1-5-pruned.ckpt`. 
 Then run the code to get the output model `./models/diad.ckpt`.
 
 `python build_model.py`
