@@ -32,5 +32,4 @@ dependencies:
       - torchmetrics==0.6.0
       - tqdm==4.65.0
       - transformers==4.19.2
-      - xformers==0.0.18
       - taming-transformers
